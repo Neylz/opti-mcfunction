@@ -438,7 +438,7 @@ All references and credits for anyone who participated directly or indirectly in
 ### Sources & References
 1. [@Dominexis](https://github.com/Dominexis) selectors efficiency analysis [[ GSheet ](https://docs.google.com/spreadsheets/d/1Z0XVvyfzVSGstmpLSMKnwlxwYg8N2ZFl3Xmh0ZV0yZU/edit#gid=0)] [[ Original post ](https://discord.com/channels/154777837382008833/154777837382008833/1031977637620498462)]
 2. MCP-Reborn [[ Github Repo ](https://github.com/Hexeption/MCP-Reborn)]
-3. Minecraft Commands' Dscord server [[ link ](https://discord.gg/QAFXFtZ)]
+3. Minecraft Commands' Discord server [[ link ](https://discord.gg/QAFXFtZ)]
 4. [@Misode](https://github.com/misode) McMeta repo [[ Github Repo ](https://github.com/misode/mcmeta)]
 5. Minecraft Wiki [[ link ](https://minecraft.fandom.com/wiki/Minecraft_Wiki)]
 6. [u/Wooden_chest](https://www.reddit.com/user/Wooden_chest/) performance tests [[ link ](https://www.reddit.com/r/MinecraftCommands/comments/w4vjs3/whenever_i_create_datapacks_i_sometimes_do/)]
