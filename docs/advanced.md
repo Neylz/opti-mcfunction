@@ -86,8 +86,6 @@ Instead of checking all entities in just one tick every 5 ticks, we will check 1
 
 To implement this system, I will separate the entities into 5 groups. To do this, I will create a score that will cycle between 0 and 4 and will progress with each entity added to the group, and I will give a tag corresponding to the entity's group. _I'm using a score instead of a tag because besides tag verification being faster, minecraft has a bug with scores on despawning entities that can even corrupt your world over time_
 
-Usually we will actually need to choose a group for each entity individually, rather than a group for each entity in that tick, to ensure that the groups are evenly distributed.
-
 First, let's add the score to cycle the groups
 
 ```mcfunction
