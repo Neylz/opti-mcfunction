@@ -32,7 +32,7 @@ Let's take a look at the duration per TPS graph (which you can open by pressing 
 
 ![Normal TPS](../assets/load_balancing/graph1.png)
 
-Seems great! Now let's turn on our datapack. Let's convert the graph again
+Seems great! Now let's turn on our datapack. Let's check the graph again
 
 ![Very bad TPS](../assets/load_balancing/graph2.png)
 
