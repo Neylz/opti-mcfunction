@@ -52,20 +52,20 @@ In our case, it doesn't have to be so instantaneous. If you have a few ticks of 
 
 ### Trying to solve the problem
 
-Let's start by doing what most people do to try to solve this: Use `/shedule`. Instead of checking every tick, I will set it to check every 5 ticks.
+Let's start by doing what most people do to try to solve this: Use `/schedule `. Instead of checking every tick, I will set it to check every 5 ticks.
 
-Let's start by changing our command from the tick function to a specific function, and trigger the shedule from the load function
+Let's start by changing our command from the tick function to a specific function, and trigger the schedule  from the load function
 
 ```mcfunction
-#> shedule_5t.mcfunction
+#> schedule _5t.mcfunction
 execute as @e[type=!player] run function example:try_sky_burn
 
-schedule function example:shedule_5t 5t replace
+schedule function example:schedule _5t 5t replace
 ```
 
 ```mcfunction
 #> on_load.mcfunction
-function example:shedule_5t
+function example:schedule _5t
 ```
 
 This is already enough to run the function every 5 ticks
@@ -122,7 +122,7 @@ Now, let's put in the tick function to assign a group to entities that do not ye
 execute as @e[tag=!sky_burn_has_group] run function example:assign_group
 ```
 
-This is already enough to give each entity a group. Note that I also removed the shedule functions from the load, since we won't be using it anymore. I also deleted the `shedule_5t.mcfunction` function
+This is already enough to give each entity a group. Note that I also removed the schedule  functions from the load, since we won't be using it anymore. I also deleted the `schedule _5t.mcfunction` function
 
 Now, we need to modify our tick to select one of the groups to update, and update the corresponding group. Let's do it.
 
@@ -155,17 +155,17 @@ We have successfully load balanced by distributing the load between the ticks! Y
 
 _The more attentive and experienced readers will realize that checking if an entity is exposed to the sky is something trivial using `positioned over`. I added the line `execute as @e as @e as @e` at the end of the function just to make it heavy and be able to better demonstrate things ;)_
 
-### When do not use Load Balancing
+### When not to use Load Balancing
 
 You probably noticed that although we have applied load balancing correctly, our datapack has a much higher overhead since it needs to manage and execute commands based on groups. In this case, it was a good thing, as it made the datapack more efficient. But it may not always be so
 
-If you have applied load balancing correctly and the max ms of the graph is still greater than without it, then the overhead is significantly heavier than the operation and you should not apply this
+If you have applied load balancing correctly and the max ms of the graph is still greater than without it, then the overhead is significantly heavier than the operation and you should not apply this. In other words, do not use it if it does not bring a performance benefit.
 
 ### Conclusion
 
 We should use load balancing to distribute the weight of our commands by spreading them across ticks.
 
-Knowing this, keep in mind that this is not the only possible use of load balancing. You might want to spread your commands in another way, for example by modifying large areas of blocks separating them into small parts over several ticks. You might also want to have 2 shedules that execute every 2 ticks intercalated with each doing a completely different or intertwined function. The important thing is to distribute the weight of your commands between the tick to keep the graph apartment and avoid tick overload!
+Knowing this, keep in mind that this is not the only possible use of load balancing. You might want to spread your commands in another way, for example by modifying large areas of blocks separating them into small parts over several ticks. You might also want to have 2 schedule s that execute every 2 ticks intercalated with each doing a completely different or intertwined function. The important thing is to distribute the weight of your commands between the tick to keep the graph apartment and avoid tick overload!
 
 # References and sources
 
