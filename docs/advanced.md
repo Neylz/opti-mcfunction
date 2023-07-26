@@ -80,7 +80,7 @@ We need to tone down those spikes, but... how?
 
 ### The real solution for this problem
 
-We need to distribute the weight of each spike among all ticks, to make the chart flat and reduce the ms max.
+We need to distribute the weight of each spike among all ticks, to make the graph flat and reduce the ms max.
 
 Instead of checking all entities in just one tick every 5 ticks, we will check 1/5 of all entities every tick, thus uniformly checking a specified amount of entity every tick.
 
