@@ -165,7 +165,7 @@ If you have applied load balancing correctly and the max ms of the graph is stil
 
 We should use load balancing to distribute the weight of our commands by spreading them across ticks.
 
-Knowing this, keep in mind that this is not the only possible use of load balancing. You might want to spread your commands in another way, for example by modifying large areas of blocks separating them into small parts over several ticks. You might also want to have 2 schedule s that execute every 2 ticks intercalated with each doing a completely different or intertwined function. The important thing is to distribute the weight of your commands between the tick to keep the graph apartment and avoid tick overload!
+Knowing this, keep in mind that this is not the only possible use of load balancing. You might want to spread your commands in another way, for example by modifying large areas of blocks separating them into small parts over several ticks. You might also want to have 2 schedules that execute every 2 ticks intercalated with each doing a completely different or intertwined function. The important thing is to distribute the weight of your commands between the tick to keep the graph apartment and avoid tick overload!
 
 # References and sources
 
