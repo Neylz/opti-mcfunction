@@ -153,11 +153,11 @@ Note that the spikes in this graph are from the game itself, not the fault of ou
 
 We have successfully load balanced by distributing the load between the ticks! Yay 🥳🥳
 
-_The more attentive and experienced readers will realize that checking if an entity is exposed to the sky is something trivial using `positioned over`. I added the line `execute as @e as @e as @e` at the end of the function just to make it heavy and be able to better demonstrate thingsz' ;)_
+_The more attentive and experienced readers will realize that checking if an entity is exposed to the sky is something trivial using `positioned over`. I added the line `execute as @e as @e as @e` at the end of the function just to make it heavy and be able to better demonstrate things ;)_
 
 ### When do not use Load Balancing
 
-You probably noticed that although we have applied load balancing correctly, our datapack has a much higher overhead since it needs to manage and execute commands based on groups.
+You probably noticed that although we have applied load balancing correctly, our datapack has a much higher overhead since it needs to manage and execute commands based on groups. In this case, it was a good thing, as it made the datapack more efficient. But it may not always be so
 
 If you have applied load balancing correctly and the max ms of the graph is still greater than without it, then the overhead is significantly heavier than the operation and you should not apply this
 
