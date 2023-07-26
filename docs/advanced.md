@@ -155,13 +155,13 @@ We have successfully load balanced by distributing the load between the ticks! Y
 
 _For those who are very attentive and more experienced, you will realize that checking if an entity is exposed to the sky is something trivial using `positioned over`. To answer the question of where so much weight came from in this function, I added the line `execute as @e as @e as @e` at the end of the function just to make it heavy and be able to better demonstrate thingsz' ;)_
 
-### Quando não utilizar isso
+### When do not use Load Balancing
 
 You probably noticed that although we have applied load balancing correctly, our datapack has a much higher overhead since it needs to manage and execute commands based on groups.
 
 If you have applied load balancing correctly and the max ms of the graph is still greater than without it, then the overhead is significantly heavier than the operation and you should not apply this
 
-### Conslusão
+### Conclusion
 
 We should use load balancing to distribute the weight of our commands by spreading them across ticks.
 
