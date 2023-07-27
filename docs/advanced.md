@@ -84,7 +84,7 @@ We need to distribute the weight of each spike among all ticks, to make the grap
 
 Instead of checking all entities in just one tick every 5 ticks, we will check 1/5 of all entities every tick, thus uniformly checking a specified amount of entity every tick.
 
-To implement this system, I will separate the entities into 5 groups. To do this, I will create a score that will cycle between 0 and 4 and will progress with each entity added to the group, and I will give a tag corresponding to the entity's group. _I'm using a score instead of a tag because besides tag verification being faster, minecraft has a bug with scores on despawning entities that can even corrupt your world over time_
+To implement this system, I will separate the entities into 5 groups. To do this, I will create a score that will cycle between 0 and 4 and will progress with each entity added to the group, and I will give a tag corresponding to the entity's group. _I'm using a tag instead of a score because besides tag verification being faster, minecraft has a bug with scores on despawning entities that can even corrupt your world over time_
 
 First, let's add the score to cycle the groups
 
