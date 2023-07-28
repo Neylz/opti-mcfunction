@@ -1,5 +1,9 @@
 [← Back to the README](../README.md)
 
+#### 🌐 Language
+**[EN]** [[FR]](lang/fr-fr/basics.md)
+
+
 ### Table of contents
 
 - [0. Preface](#0-preface)
@@ -112,7 +116,7 @@ Selectors can have different impacts on performance depending on their nature, s
 | Entity type | `type` | negligeable | Should be used each time you can sepcify it (*cf. **2.1.3.***) | improves performances |
 | Position | `x`, `y`, `z`, `dx`, `dy`, `dz`, `distance` | negligeable | Should be used on large sets of entities | improves a bit performances |
 | Scoreboard values | `tag`, `team`, `scores` | low - medium | To the most efficient to the less one, they are good selectors agrument to refine your selection (*cf. **2.1.3.***), you should use them when possible | improves performances |
-| Predicate | `predicate` | depends of what's inside | preferable to `NBT/Player Data` but to avoid | decreases performances |
+| Predicate | `predicate` | depends of what's inside | better than `NBT/Player Data` checks unless the NBT condition is used depends |
 | NBT/Player Data | `advancement`, `name`, `nbt` | strong | to avoid (use a string parser, which is very heavy) | decreases performances |
 
 

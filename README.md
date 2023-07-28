@@ -6,9 +6,13 @@ In this repository, a lot of references can be done about messages, threads or r
 
 ## Table of contents
 
-
+### English
 - [Basics & Beginners introduction](./docs/basics.md)
 - **[WIP]** [Advanced optimization](./docs/advanced.md)
+
+### Français
+- [Bases & introduction aux débutants](./docs/lang/fr-fr/basics.md)
+
 
 ## Contribute to this repository
 
