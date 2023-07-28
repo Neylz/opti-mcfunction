@@ -1,5 +1,9 @@
 [← Back to the README](../README.md)
 
+#### 🌐 Language
+**[EN]** [[FR]](lang/fr-fr/advanced.md)
+
+
 # Work in progress
 ### This file can contain errors or be incomplete.
 
