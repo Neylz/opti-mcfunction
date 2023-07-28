@@ -161,6 +161,23 @@ You probably noticed that although we have applied load balancing correctly, our
 
 If you have applied load balancing correctly and the max ms of the graph is still greater than without it, then the overhead is significantly heavier than the operation and you should not apply this. In other words, do not use it if it does not bring a performance benefit.
 
+### Another way to solve (but it is inconsistent)
+
+Another way to solve would be to use a random predicate and select entities based on that, for example
+
+```mcfunction
+#> function beign executed as a entity
+execute if predicate example:20_percent_chance run function example:random_entity_check
+```
+
+Mathematically, 20% chance per entity would be dividing 1/5 of the entities per run, with almost no overhead and with a lot of simplicity, correct?
+
+Well... kinda. The problem with this is **inconsistency**. Although on average it will actually execute on 1/5 of the entities, this is not always the case. There can be ticks that many entities are executed at the same time, and there can be ticks that almost no entities are executed! This means that commands can cause **random spikes**!
+
+In this example case, I set 5 ticks of delay for each entity, but in a real scenario I would like a precise delay of 20 ticks interval, to be able to align with the fire damage time and cause 1 damage per second. So, in this scenario, I could not use randomness at all.
+
+But, because of the huge overhead reduction, this can actually be an optimization possibility. I would particularly avoid using randomness because of inconsistency and prefer options that give me real control of what is happening. Keep in mind that we want the graphic flat, not full of waves. As a developer, it is up to you to analyze and see if it is worth using or not in your case.
+
 ### Conclusion
 
 We should use load balancing to distribute the weight of our commands by spreading them across ticks.
