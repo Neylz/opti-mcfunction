@@ -163,7 +163,7 @@ If you have applied load balancing correctly and the max ms of the graph is stil
 
 ### Another way to solve (but it is inconsistent)
 
-Uma outra maneira de solucionar seria utilizando um predicate aleatório e selecionando entidades baseado nisso, por exemplo
+Another way to solve would be to use a random predicate and select entities based on that, for example
 
 ```mcfunction
 #> function beign executed as a entity
