@@ -176,7 +176,7 @@ Well... kinda. The problem with this is **inconsistency**. Although on average i
 
 In this example case, I set 5 ticks of delay for each entity, but in a real scenario I would like a precise delay of 20 ticks interval, to be able to align with the fire damage time and cause 1 damage per second. So, in this scenario, I could not use randomness at all.
 
-But, because of the huge overhead reduction, this can actually be an optimization possibility in some cases. I would particularly avoid using randomness because of inconsistency and prefer options that give me real control of what is happening, but as this also varies from case to case, it is up to you to decide if it is a good possibility or not in your case.
+But, because of the huge overhead reduction, this can actually be an optimization possibility. I would particularly avoid using randomness because of inconsistency and prefer options that give me real control of what is happening, but as this also varies from case to case, it is up to you to decide if it is a good possibility or not in your case.
 
 ### Conclusion
 
