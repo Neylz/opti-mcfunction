@@ -116,7 +116,7 @@ Les sélecteurs peuvent avoir différents impacts sur les performances en foncti
 | Position | `x`, `y`, `z`, `dx`, `dy`, `dz`, `distance` | négligeable | Devrait être utilisé sur de grands ensembles d'entités | améliore légèrement les performances |
 | Valeurs de scoreboard | `tag`, `team`, `scores` | faible - moyen | De la plus efficace à la moins efficace, ce sont de bons arguments de sélecteur pour affiner votre sélection (*cf. **2.1.3.***), vous devriez les utiliser dès c'est possible | améliore les performances |
 | Prédicat | `predicate` | dépend des conditions du prédicat | meilleur que `NBT/Player Data` sauf si utilisation de la condition `NBT` | dépends de son contenu |
-| NBT/Player Data | `advancement`, `name`, `nbt` | strong | to avoid (use a string parser, which is very heavy) | decreases performances |
+| NBT/Player Data | `advancement`, `name`, `nbt` | forte | à éviter (utilise un analyseur de chaînes de caractères, ce qui est plutôt louf) | déteriore les performances |
 
 
 La dernière colonne indique s'il vaut la peine d'utiliser ou non l'argument pour affiner la sélection. Par exemple : Le coût de performance de cet argument est-il préférable à celui impliqué dans l'exécution de la commande suivante ?
@@ -125,7 +125,7 @@ La dernière colonne indique s'il vaut la peine d'utiliser ou non l'argument pou
 Ainsi, dans la liste ci-dessus, vous avez la majorité des arguments disponibles, classés des plus légers aux plus lourds. Les catégories `Sélection`, `Position` et `Rotation` n'ont pas d'impact significatif.
 
 
-`Type d'entité` devrait toujours être présent, autant que possible. Il a été démontré que le jeu check toujours le type du mob que l'argument soit spécifé ou non [[link to MCC's discord]](https://discord.com/channels/154777837382008833/154777837382008833/985503145239142461).
+`Type d'entité` devrait toujours être présent, autant que possible. Il a été démontré que le jeu check toujours le type du mob que l'argument soit spécifé ou non [[lien vers le discord de MCCmmds]](https://discord.com/channels/154777837382008833/154777837382008833/985503145239142461).
 
 
 `Valeurs de scoreboard` devrait être — encore une fois — utilisé le plus possbile pour limiter le nombre d'entitées sélectionnées par notre sélecteur.
@@ -274,7 +274,7 @@ Elles peuvent vous permettre d'exécuter des boucles plus lentes que les fonctio
 En fait, de nombreuses fonctions n'ont pas besoin d'être exécutées à chaque tick et peuvent se contenter d'être exécutées une fois tous les deux ticks. En utilisant cette méthode, vous pouvez diviser votre lag presque par deux. Bien entendu, vous pouvez utiliser des fonctions encore plus lentes pour réduire encore davantage le lag.
 
 
-#### How to use schedule loops ?
+#### Comment planifier des boucles ?
 ```hs
 # # # # # # # # # # # # # # # # # # # # # # #
 # foo:load                                  #
@@ -414,14 +414,14 @@ Si la condition est simple et que le nombre de sous-commandes est assez faible, 
 # 4. Récapitulatif et points importants
 
 
-- The arguments of selectors are ordered.
-- Modifying data with "/data" necessitates a high level of performance.
-- Instead of using the same selector multiple times, use a function.
-- Use the tick function when it is absolutely necessary.
-- Use advancements as events or triggers.
-- If possible, use tags checks instead of nbt checks in tick/loop functions.
-- Don't forget to run by yourself profiling which will permit you to find what is the most unefficient part of your code.
-- Focus in a first time on the laggiest parts of your code. Start by optimizing `as @e if score @s` is unefficient.
+- Les arguments de sélécteurs ont un ordre
+- Modifier les données avec `/data` impacte beaucoup les performances.
+- Au lieu d'utiliseer plusieurs fois le même sélécteur, appeler une fonction qui éxécutera les commandes.
+- Utiliser les fonctions "tick" seulement quand nécéssaire.
+- Utiliser les advancements comme des events.
+- Si possible, utiliser des séléctions par tags plutôt que des séléctionner avec des nbt à chaque tick.
+- Ne pas oublier de faire ces propres tests pour déterminer le plus optimal en fonction de la situation.
+- Se focus dans un premier temps sur les parties les plus lourdes de votre code. Commencer par optimiser `as @e if score @s` est inefficace.
 
 
 
