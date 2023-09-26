@@ -88,7 +88,7 @@ The selectors are essential in mcfunction. There are many reasons and justificat
 ### 2.1.1. Which target selector choosing ?
 
 
-`@e` is the generic selector, it selects all entities. To this selector you can add target selectors (I will not handle all of them; you can find them all [here on the wiki](https://minecraft.fandom.com/wiki/Target_selectors)). So to recap, `@e[type=minecraft:player]` will select only players.
+`@e` is the generic selector, it selects all entities. To this selector you can add target selectors (I will not handle all of them; you can find them all [here on the wiki](https://minecraft.wiki/w/Target_selectors)). So to recap, `@e[type=minecraft:player]` will select only players.
 
 We can find properties of `@e` in other selectors, but they still have their own properties:
 
@@ -162,7 +162,7 @@ With these details, we can now determine the best order:
 > `type` is always checked first regardless of order when an exact entity (not with entity tags). Additionally, this check uses an efficient class type check which is more performant than any other check. *(cf. **5.7.**)*
 
 ## 2.2. `execute if` selection
-The execute commands permits to verify conditions with the `if` argument [[ wiki ](https://minecraft.fandom.com/wiki/Commands/execute)].
+The execute commands permits to verify conditions with the `if` argument [[ wiki ](https://minecraft.wiki/w/Commands/execute)].
 
 
 In addition to the entity selectors, you can — and it is recommanded — to use the `if` argument. There is a variant of the `if` argument which is `unless` equivalent to "if not".
@@ -315,7 +315,7 @@ Another way to replace commands running from `minecraft/tags/tick.json` is to us
 So we can use this functionality to use built-in conditions for advancements.
 
 
-You can find the full list of triggers on [this page](https://minecraft.fandom.com/wiki/Advancement/JSON_format#List_of_triggers) of the wiki.
+You can find the full list of triggers on [this page](https://minecraft.wiki/w/Advancement/JSON_format#List_of_triggers) of the wiki.
 
 ⚠️ Using the `minecraft:tick` crtiteria **will not** optimize your code at all.
 
@@ -444,7 +444,7 @@ All references and credits for anyone who participated directly or indirectly in
 2. MCP-Reborn [[ Github Repo ](https://github.com/Hexeption/MCP-Reborn)]
 3. Minecraft Commands' Discord server [[ link ](https://discord.gg/QAFXFtZ)]
 4. [@Misode](https://github.com/misode) McMeta repo [[ Github Repo ](https://github.com/misode/mcmeta)]
-5. Minecraft Wiki [[ link ](https://minecraft.fandom.com/wiki/Minecraft_Wiki)]
+5. Minecraft Wiki [[ link ](https://minecraft.wiki/w/Minecraft_Wiki)]
 6. [u/Wooden_chest](https://www.reddit.com/user/Wooden_chest/) performance tests [[ link ](https://www.reddit.com/r/MinecraftCommands/comments/w4vjs3/whenever_i_create_datapacks_i_sometimes_do/)]
 7. [@capitalists#1171](https://discordapp.com/users/217271293668622344) `type` argument is allways checked (message on MinecraftCommands discord) [ link to message ](https://discord.com/channels/154777837382008833/154777837382008833/985503145239142461)
 

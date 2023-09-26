@@ -86,7 +86,7 @@ Les sélecteurs sont essentiels dans mcfunction. Il y a de nombreuses raisons et
 ### 2.1.1. Quel sélecteur choisir ?
 
 
-`@e` est le sélecteur générique, il sélectionne toutes les entités. À ce sélecteur, vous pouvez ajouter des sélecteurs de cible (vous pouvez les trouver tous [ici sur le wiki [en]](https://minecraft.fandom.com/wiki/Target_selectors)). Donc, pour récapituler, @e[type=minecraft:player] sélectionnera uniquement les joueurs.
+`@e` est le sélecteur générique, il sélectionne toutes les entités. À ce sélecteur, vous pouvez ajouter des sélecteurs de cible (vous pouvez les trouver tous [ici sur le wiki [en]](https://minecraft.wiki/w/Target_selectors)). Donc, pour récapituler, @e[type=minecraft:player] sélectionnera uniquement les joueurs.
 
 
 On peut trouver des propriétés de @e dans d'autres sélecteurs, mais ils ont toujours leurs propres propriétés :
@@ -163,7 +163,7 @@ Avec ces détails, on peut déterminer d'un ordre à respecter:
 
 ## 2.2. Séléction avec `execute if`
 
-La commande /execute permets de vérifier des conditions avec l'argument `if` [[ wiki ](https://minecraft.fandom.com/wiki/Commands/execute)].
+La commande /execute permets de vérifier des conditions avec l'argument `if` [[ wiki ](https://minecraft.wiki/w/Commands/execute)].
 
 En plus du sélécteur d'entitées, vous pouvez — et il est recommandé — d'utiliser l'agument `if`. Il y a une variante `unless` qui est son contraire, un "if not".
 
@@ -310,7 +310,7 @@ Une autre façon de remplacer les commandes tournant depuis `minecraft/tags/tick
 Nous pouvons donc utiliser cette fonctionalitée pour les conditions existantes des advancements au lieu de check une condition tous les ticks.
 
 
-Vous pouvez trouver une liste complète des différents critères sur [cette page](https://minecraft.fandom.com/wiki/Advancement/JSON_format#List_of_triggers) du wiki.
+Vous pouvez trouver une liste complète des différents critères sur [cette page](https://minecraft.wiki/w/Advancement/JSON_format#List_of_triggers) du wiki.
 
 ⚠️ Utiliser le critère `minecraft:tick` **n'optimisera pas** votre code du tout.
 
@@ -434,7 +434,7 @@ Toutes les références et les crédits pour toute personne ayant participé dir
 2. MCP-Reborn [[ Github Repo ](https://github.com/Hexeption/MCP-Reborn)]
 3. Minecraft Commands' Discord server [[ link ](https://discord.gg/QAFXFtZ)]
 4. [@Misode](https://github.com/misode) McMeta repo [[ Github Repo ](https://github.com/misode/mcmeta)]
-5. Minecraft Wiki [[ link ](https://minecraft.fandom.com/wiki/Minecraft_Wiki)]
+5. Minecraft Wiki [[ link ](https://minecraft.wiki/w/Minecraft_Wiki)]
 6. [u/Wooden_chest](https://www.reddit.com/user/Wooden_chest/) performance tests [[ link ](https://www.reddit.com/r/MinecraftCommands/comments/w4vjs3/whenever_i_create_datapacks_i_sometimes_do/)]
 7. [@capitalists#1171](https://discordapp.com/users/217271293668622344) `type` argument is allways checked (message on MinecraftCommands discord) [ link to message ](https://discord.com/channels/154777837382008833/154777837382008833/985503145239142461)
 
